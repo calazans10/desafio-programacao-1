@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
 	before_filter :authenticate_user!
 
 	def new
-		@orders = Order.all
+		@orders = current_user.orders.all
 	end
 
 	def upload
@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
 			lines.shift
 			lines.each do |l|
 				m = l.match(regexp)
-				@order = Order.create({ purchaser_name: m[1], item_description: m[2], item_price: m[3],purchase_count: m[4], merchant_address: m[5], merchant_name: m[6] })
+				@order = current_user.orders.create({ purchaser_name: m[1], item_description: m[2], item_price: m[3],purchase_count: m[4], merchant_address: m[5], merchant_name: m[6] })
 			end
 		end
 	end
