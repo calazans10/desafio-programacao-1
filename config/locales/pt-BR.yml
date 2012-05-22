@@ -1,0 +1,15 @@
+pt-BR:
+  attributes:
+    purchaser_name: "Nome do Comprador"
+    item_description: "Descrição do Item"
+    item_price: "Preço do Item"
+    purchase_count: "Quantidade da Compra"
+    merchant_address: "Endereço do Comerciante"
+    merchant_name: "Endereço do Comerciante"
+    password: "Senha"
+    password_confirmation: "Confirmação da Senha"
+    current_password: "Senha Atual"
+
+  activerecord:
+    models:
+      order: "Faturamento"

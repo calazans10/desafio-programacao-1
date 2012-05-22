@@ -1,0 +1,21 @@
+<div class="page-header">
+  <h1>Esqueceu sua senha?</h1>
+</div>
+
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div>
+  	<%= f.label :email, :class => "control-label" %>
+  	<div class="control-group">
+    	<div class="controls">
+  			<%= f.email_field :email %>
+  		</div>
+  	</div>
+	</div>  
+
+  <div class="form-actions">
+  	<%= f.submit "Envie-me instruções para redefinir senha", :class => 'btn btn-primary' %>
+    <%= link_to "Cancelar", root_path, :class => "btn" %>  
+  </div>
+<% end %>

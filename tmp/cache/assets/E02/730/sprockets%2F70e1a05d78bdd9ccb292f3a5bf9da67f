@@ -1,0 +1,14 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1337635327.679851:@value{	I"length:EFi¥I"digest;
+F"%d43dfb8a528a7ffd3db89c7e96c99affI"source;
+FI"¥(function() {
+
+  jQuery(function() {
+    $("a[rel=popover]").popover();
+    $(".tooltip").tooltip();
+    return $("a[rel=tooltip]").tooltip();
+  });
+
+}).call(this);
+;
+FI"_version;
+F"%579e4bbb6e6cccbbede98ca704c71b10

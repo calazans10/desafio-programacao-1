@@ -1,0 +1,57 @@
+<div class="page-header">
+	<h1>Faturamento</h1>
+</div>
+
+<%= form_tag({:action => :upload}, :multipart => true) do %>
+ <div class="control-group">
+    <div class="controls">
+      <%= file_field_tag 'file', :class => 'file_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+      <%= submit_tag 'Enviar', :class => 'btn btn-primary' %>
+  </div>
+<% end %>
+
+<div class="page-header">
+</div>
+
+<% if @orders.any? %>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Nome do Comprador</th>
+				<th>Descrição do Item</th>
+				<th>Preço do Item</th>
+				<th>Quantidade da Compra</th>
+				<th>Endereço do Comerciante</th>
+				<th>Nome do Comerciante</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @orders.each do |order| %>
+			<tr>
+				<td><%= order.purchaser_name.force_encoding("UTF-8") %></td>
+				<td><%= order.item_description %></td>
+				<td><%= order.item_price %></td>
+				<td><%= order.purchase_count %></td>
+				<td><%= order.merchant_address %></td>
+				<td><%= order.merchant_name %></td>
+			</tr>
+			<% end %>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><strong>Recibo Bruto Total</strong></td>
+				<td><%= revenue(@orders) %></td>
+			</tr>
+		</tfoot>
+	</table>
+<% else%>
+	<p>Nenhum dado cadastrado.</p>
+<% end %>

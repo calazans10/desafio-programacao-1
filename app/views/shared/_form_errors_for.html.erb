@@ -1,0 +1,11 @@
+<% if entity.errors.any? %>
+  <div id="error_explanation" class="alert alert-error">
+    <a class="close" data-dismiss="alert">×</a>
+    <h2 class="alert-heading"><%= pluralize(entity.errors.count, "error") %> found:</h2>
+    <ul>
+    <% entity.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

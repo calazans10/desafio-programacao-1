@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: desafio_development
+  pool: 5
+  username: postgres
+  password: "123456"
+  min_messages: WARNING
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: desafio_test
+  pool: 5
+  username: postgres
+  password: "123456"
+  min_messages: WARNING

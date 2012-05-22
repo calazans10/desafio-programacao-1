@@ -1,0 +1,74 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1337635327.04305:@value{I"
+class:EFI"BundledAsset;
+FI"id;
+F"%4fd32f00d7f86968fdd3fd9bf01d9a8bI"logical_path;
+F".twitter/bootstrap/bootstrap-transition.jsI"pathname;
+F"“/home/calazans/.rvm/gems/ruby-1.9.3-preview1/gems/twitter-bootstrap-rails-2.0.5/vendor/assets/javascripts/twitter/bootstrap/bootstrap-transition.jsI"content_type;
+FI"application/javascript;
+FI"
+mtime;
+FI"2012-04-05T09:05:01-03:00;
+FI"	body;
+FI"M/* ===================================================
+ * bootstrap-transition.js v2.0.2
+ * http://twitter.github.com/bootstrap/javascript.html#transitions
+ * ===================================================
+ * Copyright 2012 Twitter, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ========================================================== */
+
+
+!function( $ ) {
+
+  $(function () {
+
+    "use strict"
+
+    /* CSS TRANSITION SUPPORT (https://gist.github.com/373874)
+     * ======================================================= */
+
+    $.support.transition = (function () {
+      var thisBody = document.body || document.documentElement
+        , thisStyle = thisBody.style
+        , support = thisStyle.transition !== undefined || thisStyle.WebkitTransition !== undefined || thisStyle.MozTransition !== undefined || thisStyle.MsTransition !== undefined || thisStyle.OTransition !== undefined
+
+      return support && {
+        end: (function () {
+          var transitionEnd = "TransitionEnd"
+          if ( $.browser.webkit ) {
+          	transitionEnd = "webkitTransitionEnd"
+          } else if ( $.browser.mozilla ) {
+          	transitionEnd = "transitionend"
+          } else if ( $.browser.opera ) {
+          	transitionEnd = "oTransitionEnd"
+          }
+          return transitionEnd
+        }())
+      }
+    })()
+
+  })
+
+}( window.jQuery );
+;
+FI"asset_paths;
+F["“/home/calazans/.rvm/gems/ruby-1.9.3-preview1/gems/twitter-bootstrap-rails-2.0.5/vendor/assets/javascripts/twitter/bootstrap/bootstrap-transition.jsI"dependency_paths;
+F[{I"	path;
+F"“/home/calazans/.rvm/gems/ruby-1.9.3-preview1/gems/twitter-bootstrap-rails-2.0.5/vendor/assets/javascripts/twitter/bootstrap/bootstrap-transition.jsI"
+mtime;
+FIu:	Time¬€sÝ
+:@_zoneI"BRT;
+T:nano_numiz:nano_deni:submicro"‰:offsetiþÐÕI"hexdigest;
+F"%cfb822f4cbedab749456279882ef3e87I"_version;
+F"%0868aba5d4b750d3a9421721ea3d9b9c
